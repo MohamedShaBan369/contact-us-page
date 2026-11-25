@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contact">
+ 
+    <aside class="info">
+      <h1>Let’s talk about<br>your project</h1>
+      <p class="lead">Send us a message and our team will reply within one business day.</p>
+ 
+      <ul class="info-list">
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          </span>
+          <div><strong>Phone</strong><a href="tel:+201000000000">+20 100 000 0000</a></div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 7L4 6v2l8 5 8-5V6z"/></svg>
+          </span>
+          <div><strong>Email</strong><a href="mailto:info@company.com">info@company.com</a></div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <div><strong>Address</strong><span>12 Nile Street, Cairo, Egypt</span></div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v5.4l4 2.4-.8 1.3L11 13V7z"/></svg>
+          </span>
+          <div><strong>Working hours</strong><span>Sun – Thu, 9:00 AM – 5:00 PM</span></div>
+        </li>
+      </ul>
+    </aside>
+ 
+    <section class="form-wrap" aria-labelledby="form-title">
+      <form id="contactForm" novalidate>
+        <h2 id="form-title">Send us a message</h2>
+ 
+        <div class="row">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Mohamed Ahmed" autocomplete="name">
+            <small class="error" id="name-error" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+20 100 000 0000" autocomplete="tel">
+            <small class="error" id="phone-error" role="alert"></small>
+          </div>
+        </div>
+ 
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          <small class="error" id="email-error" role="alert"></small>
+        </div>
+ 
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="How can we help?">
+          <small class="error" id="subject-error" role="alert"></small>
+        </div>
+ 
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Tell us a bit about what you need"></textarea>
+          <div class="meta">
+            <small class="error" id="message-error" role="alert"></small>
+            <small class="counter"><span id="count">0</span>/500</small>
+          </div>
+        </div>
+ 
+        <button type="submit" class="btn" id="submitBtn">
+          <span class="btn-text">Send message</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+ 
+      <div class="success" id="success" hidden>
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 52 52"><path d="M14 27l8 8 16-17"/></svg>
+        </div>
+        <h2>Message sent</h2>
+        <p>Thanks <strong id="successName"></strong>, we received your message and will reply by email soon.</p>
+        <button type="button" class="btn btn-ghost" id="resetBtn">Send another message</button>
+      </div>
+    </section>
+ 
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
